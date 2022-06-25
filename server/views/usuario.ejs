@@ -4,4 +4,10 @@
 <h1><%= title %></h1>
 <p>Welcome to <%= title %></p>
 
+<% if(usuario) { %>
+    <h2>#<%= usuario.id %> <%= usuario.nome %></h2>
+<% } else { %>
+    <h2>Não tem usuário!</h2>
+    <% } %>
+
 <%- include('partials/footer') %>

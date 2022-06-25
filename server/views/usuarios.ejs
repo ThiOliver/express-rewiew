@@ -4,4 +4,21 @@
 <h1><%= title %></h1>
 <p>Welcome to <%= title %></p>
 
+<% if (locals.usuarios) { %>
+
+<ul>
+    <% for (let usuario of usuarios) { %>
+
+    <li>#<%= usuario.id %> <%= usuario.nome %></li>
+
+    <% } %>
+
+</ul>
+
+<% } else { %>
+
+<h2>Deu ruim não tem usuário!</h2>
+<% } %>
+
+
 <%- include('partials/footer') %>
